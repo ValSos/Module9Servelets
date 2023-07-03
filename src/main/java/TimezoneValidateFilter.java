@@ -7,8 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.time.ZoneId;
 
-/*
-@WebFilter(value = "/time/*")
+@WebFilter(value = "/time")
 public class TimezoneValidateFilter extends HttpFilter {
     @Override
     public void doFilter(HttpServletRequest req,
@@ -39,4 +38,3 @@ public class TimezoneValidateFilter extends HttpFilter {
         }
     }
 }
-*/

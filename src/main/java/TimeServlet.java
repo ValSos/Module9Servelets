@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@WebServlet(value = "/time-template")
+@WebServlet(value = "/time")
 public class TimeServlet extends HttpServlet {
     private TemplateEngine engine;
 
@@ -54,7 +54,7 @@ public class TimeServlet extends HttpServlet {
         resp.setContentType("text/html");
 
         Context context = new Context(req.getLocale(), Map.of("time", getCurrentTime(req, resp)));
-        engine.process("time-template", context, resp.getWriter());
+        engine.process("time", context, resp.getWriter());
         resp.getWriter().close();
 
     }
